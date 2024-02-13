@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((data) => {
                 var itemList = document.getElementById("my-list");
                 var template = document.getElementById("list-template");
+                var total = itemList.childElementCount + 1;
                 data.results.forEach(element => {
                     var clone = template.content.cloneNode(true);
                     var colElement = clone.querySelector(".col-xs-12");
