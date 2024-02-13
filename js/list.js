@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let Personaje = 0;
     document.querySelector(".btn.btn-primary").addEventListener("click", event => {
         fetch('https://rickandmortyapi.com/api/character/${Personaje}')
+             Personaje++;
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -11,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((data) => {
                 var itemList = document.getElementById("my-list");
                 var template = document.getElementById("list-template");
-                Personaje++;
                 data.results.forEach(element => {
                     var clone = template.content.cloneNode(true);
                    var colElement = clone.querySelector(".col-xs-12");
