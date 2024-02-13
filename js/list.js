@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".btn.btn-primary").addEventListener("click", event => {
-        personaje = 0
-        fetch('https://rickandmortyapi.com/api/character'{personaje}personaje++)
+        fetch('https://rickandmortyapi.com/api/character')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
