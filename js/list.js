@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 return response.json();
             })
             .then((data) => {
-                Personaje++;
                 var itemList = document.getElementById("my-list");
                 var template = document.getElementById("list-template");
                 data.results.forEach(element => {
