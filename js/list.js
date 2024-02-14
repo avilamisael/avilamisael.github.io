@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 var template = document.getElementById("list-template");
                 data.results.forEach(element => {
                     var clone = template.content.cloneNode(true);
-                   var colElement = clone.querySelector(".col-xs-12");
+                    var colElement = clone.querySelector(".col-xs-12");
                     if (colElement) {
                         colElement.setAttribute("data-detail", element.id);
                     }
